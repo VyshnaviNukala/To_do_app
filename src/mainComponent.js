@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import './MainComponent.css';
+import Sidecomponent from './sideComponent';
 import { Modal, ModalBody, ModalHeader, Input, ModalFooter } from 'reactstrap';
 
 function MainComponent() {
@@ -53,39 +54,18 @@ function MainComponent() {
     <div className="container-fluid">
      <div className="row">
          <div className="col-md-2">
-          
-    
-         <div className='container-fluid sidebar col-md-12'> 
-            
-            
-            
-             <div >
+         <div className='container-fluid sidebar col-md-12'>
+         
          <div className='sideheading col-md-12 '>Task Boards</div>
          <br></br>
         <br></br>
          <br></br>
-         <div className='sidepart col-md-12 '>
-         <div className="  col-md-12 ">
-            <span className='sideheading1'> FreeLance project</span> 
-          </div>
-          <br></br>
-         <div className="  col-md-12 ">
-            <span className='sideheading2'>SBI Outsource</span> 
-          </div>
-          <br></br>
-          <div className="  col-md-12 ">
-            <span className='sideheading2'>HCL project 1</span> 
-          </div>
-          <br></br>
-          <div className="  col-md-12 ">
-            <span className=' text-primary'> +Add new Project</span> 
-          </div>
-     </div>         </div>
-     </div>
-        
+          <Sidecomponent/>
+         
+     </div>   
       </div>
         <div className="col-md-10">
-          <>
+          
           <Modal size='lg' isOpen={modalOpen} toggle={() => setModalOpen(!modalOpen)} id="form-id">
         <ModalHeader toggle={() => setModalOpen(!modalOpen)}>Add new task</ModalHeader>
         <ModalBody>
@@ -250,7 +230,7 @@ function MainComponent() {
               
             </div>
             
-          </>
+        
         </div>
       </div>
     </div>
